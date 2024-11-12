@@ -2,10 +2,11 @@ import type { QueryItem } from '~/types'
 
 export const QUERY_LIST = {
   movie: <QueryItem[]>([
-    { type: 'movie', title: 'Popular Movies', query: 'popular' },
-    { type: 'movie', title: 'Top Rated Movies', query: 'top_rated' },
-    { type: 'movie', title: 'Upcoming Movies', query: 'upcoming' },
-    { type: 'movie', title: 'Now Playing Movies', query: 'now_playing' },
+    { type: 'movie', title: 'Upcoming Movie Fan Clubs', query: 'upcoming' },
+    { type: 'movie', title: 'Now Playing Movie Fan Clubs', query: 'now_playing' },
+    { type: 'movie', title: 'Popular Movie Fan Clubs', query: 'popular' },
+    { type: 'movie', title: 'Top Rated Movie Fan Clubs', query: 'top_rated' },
+
   ]),
   tv: <QueryItem[]>([
     { type: 'tv', title: 'Popular TV Shows', query: 'popular' },

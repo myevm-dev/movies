@@ -28,9 +28,20 @@ const directors = computed(() => props.item.credits?.crew.filter(person => perso
     />
     <div lt-md:w="[calc(100vw-2rem)]" flex="~ col" md:p4 gap6>
       <div v-if="props.item.overview">
-        <h2 text-3xl mb4>
-          {{ $t('Storyline') }}
-        </h2>
+        <div flex="~ row items-center gap-2">
+          <h2 text-3xl mb4>
+            {{ $t('Storyline') }}
+          </h2>
+          <!-- "Go to Fan Club" Button -->
+          <button @click="window.open('https://example.com/fan-club', '_blank')" 
+                  border="none" outline="none" background-color="#19e5c4"
+                  padding="10px 20px" font-size="12px" font-weight="700" 
+                  color="#000" border-radius="5px" transition="all ease 0.1s" 
+                  box-shadow="0px 5px 0px 0px #a29bfe"
+                  style="cursor: pointer;">
+            Go to Fan Club
+          </button>
+        </div>
         <div op80 v-text="props.item.overview" />
       </div>
 
@@ -140,3 +151,27 @@ const directors = computed(() => props.item.credits?.crew.filter(person => perso
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Button Styles from Uiverse.io */
+button {
+  border: none;
+  outline: none;
+  background-color: #19e5c4;
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 11px; /* Reduced font size */
+  font-weight: 700;
+  color: #000;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #a29bfe;
+  cursor: pointer;
+  margin-left: 18px;
+  margin-bottom:10px; /* Added margin to the left */
+}
+
+button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+</style>
