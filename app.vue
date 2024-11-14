@@ -7,7 +7,7 @@ useHead({
   },
   charset: 'utf-8',
   title: 'Movies',
-  titleTemplate: title => title !== 'Nuxt Movies' ? `${title} · Nuxt Movies` : title,
+  titleTemplate: title => title !== 'Movie Clubs' ? `${title} · Movie Clubs` : title,
   meta: [
     { name: 'description', content: 'A TMDB client built with Nuxt Image to show the potential of it ✨' },
     { property: 'og:image', content: 'https://movies.nuxt.space/social-card.png' },
